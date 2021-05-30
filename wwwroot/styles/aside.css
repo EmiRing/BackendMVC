@@ -1,0 +1,40 @@
+
+aside {
+    grid-area: aside;
+    width: 200px;
+    padding: 50px 25px 10px 25px;
+    /* padding-top: 50px;
+    padding-left: 25px; */
+    border: #ade8f4 solid;
+    background-color: #ade8f4;
+    margin-right: 15px;
+    border-radius: 25px;
+}
+
+aside h2{
+    text-align: center;
+}
+
+aside ul{
+    
+    list-style-type:a circle;
+    padding: 20px;
+    
+}
+
+li:nth-of-type(odd) {
+    color: blueviolet;
+}
+li:nth-of-type(even) {
+    color:crimson;
+}
+
+aside .cities{
+    list-style-position: inside;
+    margin-left: 10px;
+    
+}
+
+.cities > li {
+    color: black;
+}

@@ -1,0 +1,10 @@
+﻿@model Project
+
+<div class="d-flex justify-content-center" id="container">
+    <div class="wrapper">
+        <h3>
+            <a asp-controller="Projects" asp-action="DisplayProject" asp-route-id="@Model.ProjectId">@Model.Name</a>
+        </h3>
+        <p>@Model.ShortDescription</p>
+    </div>
+</div>

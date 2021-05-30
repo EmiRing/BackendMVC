@@ -1,0 +1,54 @@
+﻿@model PersonViewModel
+
+
+<div class="d-flex justify-content-center" id="container">
+    <div class="wrapper" style="min-width:640px !important">
+        <table class="table table-striped">
+            <thead class="text-white bg-primary">
+                <tr>
+                    <th scope="col"><a class="text-white" asp-action="Sort" asp-route-sortBy="FirstName">First name</a> </th>
+                    <th scope="col"><a class="text-white" asp-action="Sort" asp-route-sortBy="LastName">Last name</a></th>
+                    <th scope="col"><a class="text-white" asp-action="Sort" asp-route-sortBy="Phone">Phone number</a></th>
+                    <th scope="col"><a class="text-white" asp-action="Sort" asp-route-sortBy="City">City</a></th>
+                    <th scope="col"><a class="text-white" asp-action="Sort" asp-route-sortBy="Gender">Gender</a></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var person in Model.People)
+                {
+
+                    <partial name="_personItem" model="person" />
+
+                }
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-sm-6 ">
+                <a asp-controller="Person" asp-action="UpdatePersonList" type="button" class="btn btn-primary">Add Person</a>
+            </div>
+            <form class="col-sm-6">
+               
+                <div class="row">
+                    <input type="text" id="" name="filter" class="form" />
+                    <input asp-controller="Person" asp-action="FilterList" name="filterBtn" type="submit" class="btn btn-primary" value="Filter">
+                    <input asp-controller="Person" asp-action="FilterList" name="filterBtn" type="submit" class="btn btn-primary" value="Reset">
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

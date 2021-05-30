@@ -1,0 +1,35 @@
+@import "aside.css";
+@import "header.css";
+@import "main.css";
+
+* {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#pagecontainer {
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+footer {
+    grid-area: footer;
+    padding: 3px 3px 3px 20px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'main main aside'
+    'main main aside'
+    'footer footer footer' ;
+    width: clamp(1024px, 1024px, 1024px);
+    background-color: #90e0ef;
+    margin: 0px auto;
+    box-shadow: 10px 10px 5px #00b4d8;
+}
+    

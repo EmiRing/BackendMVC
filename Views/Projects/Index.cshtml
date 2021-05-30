@@ -1,0 +1,8 @@
+﻿@model ProjectViewModel
+
+<h1>List of projects</h1>
+
+@foreach (var project in Model.Projects)
+{
+    <partial name="_ProjectItem" model="project" />
+}

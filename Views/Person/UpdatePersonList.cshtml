@@ -1,0 +1,55 @@
+﻿@model Person
+
+<div class="d-flex justify-content-center" id="container">
+    <div class="wrapper">
+        <form action="" method="post" class="form-horizontal" role="form">
+            <h4>Please enter the data.</h4>
+
+            
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <div class="">
+                    <input type="text" id="guess" asp-for="FirstName" class="form-control" autofocus required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <div class="">
+                    <input type="text" id="LastName" asp-for="LastName" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <div class="">
+                    <input type="text" id="PhoneNr" asp-for="PhoneNumber" class="form-control" pattern="0[0-9]{3}-[0-9]{6}" placeholder="0123-456789" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <div class="">
+                    <input type="text" id="City" asp-for="City" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <div class="">
+                    <select type="text" id="Gender" asp-for="Gender" class="form-control" required>
+                        <option value=""></option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div class="form-row">
+                    <div class="col-md-offset-2 ">
+                        <input asp-action="AddPersonToList" type="submit" name="submitButton" class="btn btn-primary" value="Add" />
+                    </div>
+                    
+                </div>
+             </div>   
+        </form>
+        
+    </div>
+</div>
